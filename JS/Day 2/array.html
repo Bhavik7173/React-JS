@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let title = []
+        function addTask() {
+
+            var task = document.getElementById("title").value;
+            // console.log("Click On Button...." , task);
+            document.getElementById("title").value = "";
+            title.push(task);
+            disp();   //nesting function
+            dispData();
+        }
+        function disp() {
+            let output = "<ol>"
+            for (let i = 0; i < title.length; i++) {
+                output += "<li>" + title[i] + "</li>";
+                console.log(title[i]);
+            }
+            output += "</ol>"
+            document.getElementById("tasklist").innerHTML = output
+        }
+        function dispData() {
+            let output = "<ul>"
+            for (let i = 0; i < title.length; i++) {
+                output += "<li>" + title[i] + "</li>";
+                console.log(title[i]);
+            }
+            output += "</ul>";
+            document.getElementById("unorder_list").innerHTML = output
+        }
+    </script>
+</head>
+
+<body>
+    <label type="text"></label>
+    <input type="text" placeholder="Enter the Language" id="title" />
+    <input type="button" value="+" onclick="addTask()">
+    <div id="tasklist">
+        <!-- <ol>
+            <li>item-1</li>
+            <li>item-2</li>
+        </ol> -->
+    </div>
+    <div id="unorder_list"></div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+Audio
+    control
+    autoplay
+    muted
+    loop
+    preload
+        auto
+        metadata
+        none

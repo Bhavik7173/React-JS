@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addition()
+        {
+            var a = parseInt(document.getElementById("num1").value)
+            var b = parseInt(document.getElementById("num2").value)
+            var c = a + b
+            document.getElementById("rst").innerHTML = c
+        }
+        function reset()
+        {
+            document.getElementById("num1").value = ""   
+            document.getElementById("num2").value = ""   
+            document.getElementById("rst").innerHTML = ""   
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Enter First Number" id="num1"><br>
+    <input type="number" placeholder="Enter Second Number" id="num2"><br>
+    <div id="rst"> </div>
+    <input type="button" value="+" onclick="addition()">
+    <input type="button" value="-">
+    <input type="button" value="*">
+    <input type="button" value="/">
+    <input type="button" value="C" onclick="reset()">
+    
+</body>
+</html>

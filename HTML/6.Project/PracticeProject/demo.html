@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 600px;
+            padding-top: 80px;
+
+
+        }
+
+        .p_style {
+            background-color: rgb(118, 31, 52);
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Courier New', Courier, monospace;
+            font-style: italic;
+            text-align: right;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+        }
+
+        .home_screen {
+            width: 100%;
+            height: 600px;
+        }
+
+        .gallery {
+            width: 33%;
+            height: 30%;
+
+
+        }
+
+        .gallery_division {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 600px;
+            padding-top: 10px;
+            background-color: gray;
+        }
+
+        .video_division {
+            width: 30%;
+            height: 30%;
+            margin-right: 15px;
+            background-color: cadetblue;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            width: auto;
+            height: fit-content;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .text-footer {
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Windows', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .background {
+            background: grey;
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+
+        .About-us {
+            width: 100%;
+            text-align: center;
+            background-color: #ccc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: red;
+            font-size: 35px;
+        }
+
+
+
+        p {
+            font-size: 20px;
+        }
+
+
+
+        .fa fa {
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #3B5998;
+            color: white;
+            border-radius: 8px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body link="white" vlink="white">
+    <p align="center" class="p_style">
+        <a href="#home_div" class="header_style">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#gallery_div" class="header_style">My Gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#video_div" class="header_style">My Video</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#contact_div" class="header_style">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#about_div" class="header_style">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <div id="home_div">
+        <p>Home</p>
+        <img class="home_screen" src="../assests/images/4092081.jpg">
+    </div>
+    <div id="gallery_div">
+        <p>Photo Gallery</p>
+        <div class="gallery_division">
+            <img class="gallery" src="../assests/images/1216059.jpg">
+            <img class="gallery" src="../assests/images/2182389.jpg">
+            <img class="gallery" src="../assests/images/53439.jpg">
+            <img class="gallery" src="../assests/images/840326.jpg">
+            <img class="gallery" src="../assests/images/840360.jpg">
+            <img class="gallery" src="../assests/images/2182389.jpg">
+            <img class="gallery" src="../assests/images/53439.jpg">
+            <img class="gallery" src="../assests/images/840326.jpg">
+            <img class="gallery" src="../assests/images/1216059.jpg">
+        </div>
+    </div>
+    <div id="video_div">
+        <p>Video Gallery</p>
+        <div>
+            <video class="video_division" src="../assests/videos/Mera Hriday Tum.mp4" controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/AEROPLANE - Mr. Faisu & Jannat Zubair _ Vibhor Parashar _ Rajat Nagpal _ Anshul Garg.mp3"
+                controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/Aladdin_Yasmine_Theme_Song_[_Version_-_16_]._Aladdin_-_Naam_Toh_Suna_Hoga._Sab_Tv.(128k).mp3"
+                controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/Bahot Roye - Official Video _ Payal Dev _ Ashnoor K _ Sunny C _ Surjit Khairhwala _ Sad Song 2020 _ ( 128kbps ).mp3"
+                controls preload="auto"></video>
+            <video class="video_division" src="../assests/videos/Mera Hriday Tum.mp4" controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/AEROPLANE - Mr. Faisu & Jannat Zubair _ Vibhor Parashar _ Rajat Nagpal _ Anshul Garg.mp3"
+                controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/Aladdin_Yasmine_Theme_Song_[_Version_-_16_]._Aladdin_-_Naam_Toh_Suna_Hoga._Sab_Tv.(128k).mp3"
+                controls preload="auto"></video>
+            <video class="video_division"
+                src="../assests/videos/Bahot Roye - Official Video _ Payal Dev _ Ashnoor K _ Sunny C _ Surjit Khairhwala _ Sad Song 2020 _ ( 128kbps ).mp3"
+                controls preload="auto"></video>
+            <video class="video_division" src="../assests/videos/Mera Hriday Tum.mp4" controls preload="auto"></video>
+        </div>
+    </div>
+    <div id="contact_div">
+        <p>Contact Us</p>
+        <div class="container">
+            <form>
+                <label for="fname">First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+                <label for="lname">Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+                <label for="country">Country</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="india">India</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select><br>
+
+                <label for="subject">Subject</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                    style="height:200px"></textarea><br>
+
+                <br><input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+    <div id="about_div" class="About-us"">
+        <h1>About Us</h1>
+        <div>
+            <p>Our mission is to empower young Students to be the inventors and creators.</p>
+            <hr>
+            <p>In a world where so much is being done for technology and so little for the environment, education is not
+                even a part of most discussions.</p>
+            <p>We at Studytonight believe that by widening the reach of education, by making it freely available, so
+                much can be achieved.</p>
+            <p>And this journey started in 2013 when a young boy thought "wouldn't it be great, to have a website, with
+                simple tutorials for programming languages, just like a friend would teach you!", and Studytonight was
+                born.</p>
+            <h3> follow us on </h3>
+            <a href="#" class="fa fa"></a>
+            <a href="#" class="fa fa"></a>
+            <a href="#" class="fa fa"></a>
+        </div>
+    </div>
+    <footer class="background">
+        <p class="text-footer">
+            Copyright ©-All rights are reserved
+        </p>
+
+    </footer>
+</body>
+
+</html>

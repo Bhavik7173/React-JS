@@ -1,0 +1,132 @@
+<<<<<<< HEAD
+mrbhavik2711@gmail.com   ====> Bhavik@3797
+
+https://ersumit1.github.io/html_websites/index.html#home_div
+create folder
+open cmd
+code .
+write code in html pages
+cmd
+git init
+git add index.html (page name)
+git commit -m "index page"
+git branch -M main
+git remote add origin https://github.com/Bhavik8360/demo.git
+git push -u origin main
+
+https://ersumit1.github.io/html_websites
+
+
+Man Patel08:11
+no
+Man Patel08:14
+gain repeat
+Janak Vyas08:14
+yes sir
+You08:14
+Please Show the step file once.
+sumit davda08:24
+https://ersumit1.github.io/html_websites/index.html#home_div
+create folder
+open cmd
+code .
+write code in html pages
+cmd
+git init
+git add index.html (page name)
+git commit -m "index page"
+git branch -M main
+git remote add origin https://github.com/ersumit1/html_websites.git
+git push -u origin main
+
+https://ersumit1.github.io/html_websites
+Man Patel08:25
+yes
+Shailesh Ladumor08:25
+Ok
+Janak Vyas08:25
+no sir not available today
+Prit Patel08:26
+sir i am joined from system
+Man Patel08:26
+yes i doing
+Prit Patel08:28
+sorry sir there was network issue
+Janak Vyas08:36
+no sir system is not available today
+Man Patel08:37
+ha
+Janak Vyas08:37
+yes sir
+Man Patel08:38
+can share screen?
+okk
+no pro
+sumit davda09:14
+=======
+mrbhavik2711@gmail.com   ====> Bhavik@3797
+
+https://ersumit1.github.io/html_websites/index.html#home_div
+create folder
+open cmd
+code .
+write code in html pages
+cmd
+git init
+git add index.html (page name)
+git commit -m "index page"
+git branch -M main
+git remote add origin https://github.com/Bhavik8360/demo.git
+git push -u origin main
+
+https://ersumit1.github.io/html_websites
+
+
+Man Patel08:11
+no
+Man Patel08:14
+gain repeat
+Janak Vyas08:14
+yes sir
+You08:14
+Please Show the step file once.
+sumit davda08:24
+https://ersumit1.github.io/html_websites/index.html#home_div
+create folder
+open cmd
+code .
+write code in html pages
+cmd
+git init
+git add index.html (page name)
+git commit -m "index page"
+git branch -M main
+git remote add origin https://github.com/ersumit1/html_websites.git
+git push -u origin main
+
+https://ersumit1.github.io/html_websites
+Man Patel08:25
+yes
+Shailesh Ladumor08:25
+Ok
+Janak Vyas08:25
+no sir not available today
+Prit Patel08:26
+sir i am joined from system
+Man Patel08:26
+yes i doing
+Prit Patel08:28
+sorry sir there was network issue
+Janak Vyas08:36
+no sir system is not available today
+Man Patel08:37
+ha
+Janak Vyas08:37
+yes sir
+Man Patel08:38
+can share screen?
+okk
+no pro
+sumit davda09:14
+>>>>>>> b306a2ff0411899226ad5e42beaa852b329963b2
+https://ersumit1.github.io/html_websites/index.html#home_div

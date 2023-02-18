@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text_in {
+            font-size: 18px;
+            margin: 10px;
+            font-style: italic;
+            width: 400px;
+        }
+
+        .form_style {
+            border: 2;
+            width: fit-content;
+            height: 30%;
+            background-color: burlywood;
+        }
+
+        .btn {
+            width: 40%;
+            height: auto;
+            font-size: 20px;
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .table_format {
+            border: 3px;
+            margin-top: 20px;
+            width: fit-content;
+            height: auto;
+            display: block;
+            background-color: brown;
+            font-size: 15px;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        function getData() {
+            var table = document.getElementById("tbl");
+
+            var row = table.insertRow(-1);
+
+            var name = row.insertCell(0);
+            var mobile = row.insertCell(1);
+            var email = row.insertCell(2);
+
+            name.innerHTML = document.getElementById("name").value;
+            mobile.innerHTML = document.getElementById("mob").value;
+            email.innerHTML = document.getElementById("email").value;
+
+        }
+        function reset() {
+            document.getElementById("name").value = ""
+            document.getElementById("mob").value = ""
+            document.getElementById("email").value = ""
+        }
+    </script>
+</head>
+
+<body>
+    
+    <form class="form_style">
+        <input type="text" placeholder="Enter the Name" class="text_in" id="name"><br>
+        <input type="number" placeholder="Enter the Mobile" class="text_in" id="mob"><br>
+        <input type="email" placeholder="Enter the Email" class="text_in" id="email"><br>
+        <input type="submit" value="Submit" class="btn" onclick="getData()">
+        <input type="reset" value="Reset" class="btn" onclick="reset()">
+    </form>
+    <table class="table_format" id="tbl">
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+        </tr>
+    </table>
+</body>
+
+</html>
