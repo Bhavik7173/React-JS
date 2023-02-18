@@ -20,17 +20,38 @@
         }
     </style>
     <script>
-        let contact = []
-        function addContact() {
-            let name = document.getElementById("uname").value
-            let email = document.getElementById("uemail").value
-            let phone = document.getElementById("uphone").value
+        // let contact = []
+        let falg = -1
+        let contact = [
+            { 'name': 'aaa', 'email': 'a@gmail', 'contact': 111 },
+            { 'name': 'bbb', 'email': 'b@gmail', 'contact': 222 },
+            { 'name': 'ccc', 'email': 'c@gmail', 'contact': 333 },
+            { 'name': 'ddd', 'email': 'd@gmail', 'contact': 444 },
+            { 'name': 'eee', 'email': 'e@gmail', 'contact': 555 }
+        ];
+        function getContact() {
+            let name = nameElement.value
+            let email = emailElement.value
+            let phone = contactElement.value
 
             let temp = []
             temp['name'] = name
             temp['email'] = email
             temp['contact'] = phone
-            contact.push(temp)
+            return temp;
+        }
+        function addContact() {
+
+            let temp = getContact();
+            if(falg!=-1)
+            {
+                contact[falg] = temp
+                falg = -1
+                addButton.value = "Add Contact"
+            }
+            else{
+                contact.push(temp)
+            }
             console.log(contact)
             dispData();
             resetField();
@@ -49,18 +70,40 @@
                 output += "<td>" + contact[i].name + "</td>"
                 output += "<td>" + contact[i].email + "</td>"
                 output += "<td>" + contact[i].contact + "</td>"
-                output += "<td> <a href='#'><i class='material-icons' style='font-size:30px'>edit</i></a> </td>"
-                output += "<td> <a href='#'><i class='material-icons' style='font-size:30px'>delete</i></a> </td>"
-                
+                output += "<td> <a href='#' onclick=updateContact(" + i + ")><i class='material-icons' style='font-size:30px'>edit</i></a> </td>"
+                output += "<td> <a href='#' onclick=deleteContact(" + i + ")><i class='material-icons' style='font-size:30px'>delete</i></a> </td>"
+
                 output += "</tr>";
             }
             output += "</table>"
             document.getElementById("display").innerHTML = output
         }
         function resetField() {
-            document.getElementById("uname").value = ""
-            document.getElementById("uemail").value = ""
-            document.getElementById("uphone").value = ""
+            nameElement.value = ""
+            emailElement.value = ""
+            contactElement.value = ""
+        }
+
+        function deleteContact(index) {
+            contact.splice(index, 1);
+            resetField()
+            dispData()
+            alert("Delete Record");
+        }
+
+        function updateContact(index) {
+            falg = index;
+            let tempContact = contact[index]
+            setContact(tempContact)
+        }
+
+        function setContact(tempContact) {
+            nameElement.value = tempContact['name']
+            emailElement.value = tempContact['email']
+            contactElement.value = tempContact['contact']
+
+            addButton.value = "Update Contact"
+            falg = 1
         }
     </script>
 </head>
@@ -76,12 +119,18 @@
     <input type="text" placeholder="Enter the User Contact" id="uphone">
     <br>
     <br>
-    <input type="submit" value="Add Contact" onclick="addContact()">
+    <input type="submit" value="Add Contact" onclick="addContact()" id="addBtn">
     <br>
     <br>
     <div id="display">
 
     </div>
+    <script>
+        let nameElement = document.getElementById("uname");
+        let emailElement = document.getElementById("uemail");
+        let contactElement = document.getElementById("uphone");
+        let addButton = document.getElementById("addBtn");
+    </script>
 </body>
 
 </html>
