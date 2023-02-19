@@ -1,0 +1,5 @@
+add();
+function add()
+{
+    console.log("this is add function");
+}

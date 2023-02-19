@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyContact</title>
+    <script>
+        
+       // let contacts = [];
+        let globalIndex = -1;
+        let contacts = [
+            {'name':'aaa','email':'a@gmail','number':111},
+            {'name':'bbb','email':'b@gmail','number':222},
+            {'name':'ccc','email':'c@gmail','number':333},
+            {'name':'ddd','email':'d@gmail','number':444},
+            {'name':'eee','email':'e@gmail','number':555}
+        ];
+        function getContact()
+        {
+            var name = nameElement.value
+            var email = emailElement.value
+            var number = contactElement.value
+            
+            var temp = [];
+            temp['name'] = name;
+            temp['email'] = email;
+            temp['number'] = number;
+
+            return temp;
+        }
+        function resetInput()
+        {
+            nameElement.value = "";
+            emailElement.value = "";
+            contactElement.value = "";
+        }
+        function addContact()
+        {
+            let tempContact = getContact();
+            resetInput();
+
+            if(globalIndex!=-1)
+            {
+                contacts[globalIndex] = tempContact;
+                globalIndex = -1;
+                addButton.value = "Add Contact";
+            }
+            else
+            {
+                contacts.push(tempContact);
+            } 
+            dispData();
+        }
+        function dispData()
+        {
+            let output = "<table border='2' cellpadding='5px'>";
+
+            output += "<tr>";
+            output += "<th>Name</th>";
+            output += "<th>Email</th>";
+            output += "<th>Contact</th>";
+            output += "<th>update</th>";
+            output += "<th>delete</th>";
+            output += "</tr>";
+            
+            for(let i=0;i<contacts.length;i++)
+            {
+                let element = contacts[i];
+
+                output += "<tr>";
+                output += "<td>"+element['name']+"</td>";
+                output += "<td>"+element['email']+"</td>";
+                output += "<td>"+element['number']+"</td>";  
+                output += "<td><a href='#' onclick=updateContact("+i+")>update</a></td>";  
+                output += "<td><a href='#' onclick=deleteContact("+i+")>delete</a></td>";                
+                output += "</tr>";
+            }
+
+            output += "</table>";
+            //console.log(output);
+            document.getElementById("rst").innerHTML = output;
+        }
+        function setContact(contact)
+        {
+            nameElement.value = contact['name'];
+            emailElement.value = contact['email'];
+            contactElement.value = contact['number'];
+
+            addButton.value = "Update Contact";
+        }
+        function updateContact(index)
+        {
+            globalIndex = index;
+            //alert("contact updated"+index);
+            let tempContact= contacts[index];
+            setContact(tempContact);
+        }
+        function deleteContact(index)
+        {
+            let ans = confirm("Do you want to delete this record?");
+            //console.log(ans);
+            if(ans==true)
+            {
+                contacts.splice(index,1);
+                dispData();
+                alert("contact deleted...");            
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>My Contacts</h1>
+    <input type="text" id="t1" placeholder="Name"><br>
+    <input type="email" id="t2" placeholder="Email"><br>
+    <input type="number" id="t3" placeholder="Number"><br>
+    <input type="button" id="addBtn" value="Add contact" onclick="addContact()">
+    <div id="rst"></div>
+    <script>
+        let nameElement = document.getElementById("t1");
+        let emailElement = document.getElementById("t2");
+        let contactElement = document.getElementById("t3");
+        let addButton = document.getElementById("addBtn");
+    </script>
+</body>
+</html>
