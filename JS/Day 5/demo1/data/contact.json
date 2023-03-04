@@ -1,0 +1,40 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Bhavik",
+      "contact": 8733070825,
+      "email": "b@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Avi",
+      "contact": 8320246002,
+      "email": "a@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Gokul",
+      "contact": 9099781499,
+      "email": "g@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Hari",
+      "contact": 3427120279,
+      "email": "h@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Jash",
+      "contact": "7041165002",
+      "email": "j@gmail.com"
+    },
+    {
+      "id": "6",
+      "name": "Kush",
+      "contact": "985214756",
+      "email": "k@gmail.com"
+    }
+  ]
+}

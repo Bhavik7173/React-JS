@@ -1,19 +1,9 @@
-async function main() {
-    console.log("Welcome to Main Function")
-    await fetchData()
-    console.log("Bye From Main Function")
-}
-
-async function fetchData() {
-
-    console.log("Welcome to FetchData Function")
-
-    let url = " "
-    fetch(url) // return promises and future
-    .then(res =>res.json())
-    .then(data => dispData(data))
-    .catch(e => console.log(e))
-
+function fetchdata() {
+    let url = "https://jsonplaceholder.typicode.com/todos";
+    fetch(url)
+        .then(res => res.json())
+        .then(data => dispData(data))
+        .catch(err => console.log(err));
 }
 
 function dispData(data) {
@@ -41,6 +31,5 @@ function dispData(data) {
         output += "</tr>";
     }
     output += "</table>"
-    document.getElementById("display").innerHTML = output
+    document.getElementById("rst").innerHTML = output
 }
-main();
