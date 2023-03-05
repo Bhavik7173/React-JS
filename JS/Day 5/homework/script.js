@@ -82,34 +82,31 @@ function serachContact() {
     let name = nameElement.value
     let email = emailElement.value
     let mob = contactElement.value
+    let output = "<table border=3 cellpadding='10px' align='center'>";
+    output += "<tr>";
+    output += "<th>Name</th>";
+    output += "<th>Email</th>";
+    output += "<th>Contact</th>";
+    output += "<th>Update</th>";
+    output += "<th>Delete</th>";
+    output += "</tr>";
     for (let i = 0; i < contact.length; i++) {
         if (name == contact[i].name || email == contact[i].email || mob == contact[i].contact) {
             console.log(name + " " + email + " " + mob + " found it.")
-            let output = "<table border=3 cellpadding='10px' align='center'>";
-            output += "<tr>";
-            output += "<th>Name</th>";
-            output += "<th>Email</th>";
-            output += "<th>Contact</th>";
-            output += "<th>Update</th>";
-            output += "<th>Delete</th>";
-            output += "</tr>";
-
             output += "<tr>";
             output += "<td>" + contact[i].name + "</td>"
             output += "<td>" + contact[i].email + "</td>"
             output += "<td>" + contact[i].contact + "</td>"
             output += "<td> <a href='#' onclick=updateContact(" + i + ")><i class='material-icons' style='font-size:30px'>edit</i></a> </td>"
             output += "<td> <a href='#' onclick=deleteContact(" + i + ")><i class='material-icons' style='font-size:30px'>delete</i></a> </td>"
-
             output += "</tr>";
-
-            output += "</table>"
             document.getElementById("display").innerHTML = output
             flg = 1
-            
+
         }
 
     }
+    output += "</table>"
     if (flg == 0) {
         alert("Record is not found!!")
     }
