@@ -1,0 +1,10 @@
+input {
+    padding: 5px;
+}
+
+th {
+    background-color: brown;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
