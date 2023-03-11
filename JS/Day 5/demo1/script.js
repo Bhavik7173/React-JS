@@ -21,7 +21,8 @@ function dispData(data) {
     msg += "<th>NAME</th>";
     msg += "<th>CONTACT</th>";
     msg += "<th>EMAIL</th>";
-
+    msg += "<th>Update</th>";
+    msg += "<th>Delete</th>";
     msg += "</tr>";
 
     for (let i = 0; i < data.length; i++) {
@@ -32,6 +33,9 @@ function dispData(data) {
         msg += "<td>" + row['name'] + "</td>";
         msg += "<td>" + row.contact + "</td>";
         msg += "<td>" + row.email + "</td>";
+        msg += "<td> <a href='#' onclick=updateContact(" + i + ")><i class='material-icons' style='font-size:30px'>edit</i></a> </td>"
+        msg += "<td> <a href='#' onclick=deleteContact(" + i + ")><i class='material-icons' style='font-size:30px'>delete</i></a> </td>"
+
         msg += "</tr>";
 
     }
