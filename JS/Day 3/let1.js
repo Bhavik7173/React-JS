@@ -1,8 +1,8 @@
-let x = 10;
+// let x = 10;
 console.log("before function ",x);
 function display()
 {
-    //let x = 100;
+    let x = 100;
     x = 100;
     console.log("from display ",x);
 }

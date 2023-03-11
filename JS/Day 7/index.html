@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body align="center">
+    <h1>Contact Application</h1>
+    <input type="text" placeholder="Enter the User ID" id="id">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter the User Name" id="name">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter the User Email" id="email">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter the User Contact" id="contact">
+    <br>
+    <br>
+    <input type="submit" value="Add Contact" onclick="insertdata()" id="insertBtn">
+    <button onclick="fetchdata()">FetchData</button>
+    <br>
+    <br>
+    <div id="display">
+
+    </div>
+    <script>
+        let nameElement = document.getElementById("uname");
+        let emailElement = document.getElementById("uemail");
+        let contactElement = document.getElementById("uphone");
+        let addButton = document.getElementById("addBtn");
+    </script>
+</body>
+</html>

@@ -1,8 +1,9 @@
 function fetchdata() {
-    let url = "https://jsonplaceholder.typicode.com/todos";
+    // let url = "https://jsonplaceholder.typicode.com/todos";
+    let url = "https://jsonplaceholder.ir/users";
     fetch(url)
         .then(res => res.json())
-        .then(data => dispData(data))
+        .then(data => console.log(data))
         .catch(err => console.log(err));
 }
 
