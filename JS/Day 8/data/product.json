@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userId": 101,
+      "userName": "Bhavik",
+      "userEmail": "b@gmail.com",
+      "userPassword": "Bhavik@123",
+      "userCity": "Surat",
+      "userPhone": 9421653212
+    },
+    {
+      "id": 2,
+      "userId": 102,
+      "userName": "Jash",
+      "userEmail": "j@gmail.com",
+      "userPassword": "Jash@123",
+      "userCity": "Surat",
+      "userPhone": 9421653212
+    },
+    {
+      "id": 3,
+      "userId": 103,
+      "userName": "Kush",
+      "userEmail": "k@gmail.com",
+      "userPassword": "Kush@123",
+      "userCity": "Surat",
+      "userPhone": 9421653212
+    },
+    {
+      "id": 4,
+      "userId": "104",
+      "userName": "Gunjan",
+      "userMobile": "9099781499",
+      "userCity": "Surat",
+      "userEmail": "g@gmail.com",
+      "userPass": "Gunjan@123"
+    },
+    {
+      "id": 5,
+      "userId": "105",
+      "userName": "Aryan",
+      "userMobile": "7845129630",
+      "userCity": "Valsad",
+      "userEmail": "a@gmail.com",
+      "userPass": "Aryan@123"
+    },
+    {
+      "id": 6,
+      "userId": "106",
+      "userName": "Rahi ",
+      "userMobile": "9562341870",
+      "userCity": "Valsad",
+      "userEmail": "r@gmail.com",
+      "userPass": "Rahi@123"
+    },
+    {
+      "id": 7,
+      "userId": "107",
+      "userName": "Hir",
+      "userMobile": "8798653214",
+      "userCity": "Mahesana",
+      "userEmail": "h@gmail.com",
+      "userPass": "Hir@123"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productId": "p01",
+      "productName": "Mouse",
+      "quantity": 20,
+      "company": "dell",
+      "price": 300,
+      "offer": 0
+    },
+    {
+      "id": 2,
+      "productId": "p02",
+      "productName": "Keyboard",
+      "quantity": 10,
+      "company": "dell",
+      "price": 600,
+      "offer": 0
+    },
+    {
+      "id": 3,
+      "productId": "p03",
+      "productName": "LED",
+      "quantity": 5,
+      "company": "SAMSUNG",
+      "price": 7500,
+      "offer": "10%"
+    },
+    {
+      "id": 4,
+      "productId": "p04",
+      "productName": "Laptop",
+      "quantity": 10,
+      "company": "ACER",
+      "price": 50000,
+      "offer": "5%"
+    }
+  ],
+  "count": [
+    {
+      "id": 1,
+      "totalUsers": 7
+    },
+    {
+      "id": 2,
+      "totalProducts": 4
+    }
+  ]
+}
