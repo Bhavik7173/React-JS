@@ -1,0 +1,159 @@
+let counturl = "http://localhost:3000/count";
+let url = "http://localhost:3000/products";
+
+let product = []
+let totalusers = 0;
+let totalproducts = 0;
+let totalCarts = 0;
+let uid = 0;
+fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        product = data;
+        myload();
+        uid = window.sessionStorage.getItem("uid");
+        alert(uname);
+    })
+    .catch(err => console.log(err))
+
+fetch(counturl)
+    .then(res => res.json())
+    .then(data => {
+        totalusers = data[0].totalUsers
+        totalproducts = data[1].totalProducts
+        totalCarts = data[2].totalCarts
+        console.log("From load", totalCarts);
+    })
+    .catch(err => console.log(err))
+
+function updateCartCount(cnt) {
+    let ucountUrl = counturl + "/3"
+    temp = { "id": 3, "totalCarts": cnt }
+    console.log(temp);
+    fetch(ucountUrl, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(temp)
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+
+}
+function myload() {
+    let msg = "<table border=2 cellpadding=5>";
+    for (let i = 0; i < product.length; i++) {
+        console.log("From load", product);
+        let row = product[i];
+        msg += "<tr>";
+
+        msg += "<th scope='row'>" + row.id + "</th>";
+        msg += "<td>" + row['productId'] + "</td>";
+        msg += "<td>" + row['productName'] + "</td>";
+        msg += "<td>" + row['quantity'] + "</td>";
+        msg += "<td>" + row['company'] + "</td>";
+        msg += "<td>" + row['price'] + "</td>";
+        msg += "<td>" + row['offer'] + "</td>";
+        msg += "<td><a href='#' onclick=updateData(" + i + ")><i class='material-icons' style='font-size:30px'>edit</i></a></td>";
+        msg += "<td><a href='#' onclick=deleteRecord(" + i + ")><i class='material-icons' style='font-size:30px'>delete</i></a></td>";
+        msg += "<td><a href='#' onclick=addCart(" + i + ")><i class='fa fa-shopping-cart' style='font-size:30px'></i></a></td>";
+        msg += "</tr>";
+    }
+    msg += "</table>";
+    document.getElementById("display").innerHTML = msg;
+}
+function serachproduct() {
+    let flg = 0;
+    let name = document.getElementById("searchProduct").value
+    console.log(name)
+    let msg = "<table border=2 cellpadding=5>";
+
+    for (let i = 0; i < product.length; i++) {
+        if (name == product[i].productName || name == product[i].productId || name == product[i].quantity || name == product[i].company || name == product[i].price || name == product[i].offer) {
+            console.log(product[i].productName)
+            // let row = product[i];
+            msg += "<tr>";
+
+            msg += "<th scope='row'>" + product[i].id + "</th>";
+            msg += "<td>" + product[i].productId + "</td>";
+            msg += "<td>" + product[i].productName + "</td>";
+            msg += "<td>" + product[i].quantity + "</td>";
+            msg += "<td>" + product[i].company + "</td>";
+            msg += "<td>" + product[i].price + "</td>";
+            msg += "<td>" + product[i].offer + "%</td>";
+            msg += "<td><a href='#' onclick=updateData(" + i + ")><i class='material-icons' style='font-size:30px'>edit</i></a></td>";
+            msg += "<td><a href='#' onclick=deleteRecord(" + i + ")><i class='material-icons' style='font-size:30px'>delete</i></a></td>";
+            msg += "<td><a href='#' onclick=addCart(" + i + ")><i class='fa fa-shopping-cart' style='font-size:30px'></i></a></td>";
+
+            msg += "</tr>";
+            document.getElementById("display").innerHTML = msg
+            flg = 1;
+        }
+    }
+    msg += "</table>"
+    if (flg == 0) {
+        alert("Record is not found!!")
+    }
+
+}
+
+function addCart(id, pro) {
+    console.log("Product_ID===>", id);
+    let person = prompt("Enter the quantity of product which you wat to buy", "");
+    if (person == null || person == "") {
+        console.log("Null")
+    } else {
+        console.log("quantity===>", person)
+
+        let totalPrice = 0;
+        let flg = 0;
+        for (let i = 0; i < product.length; i++) {
+            if (id == product[i].id) {
+                tmpPrice = product[i].price - (product[i].price * product[i].offer * 0.01);
+                totalPrice = tmpPrice * person;
+                console.log(totalPrice)
+                flg = 1;
+                let temp = { "uid": uid, "PID": id + 1, "quantity": person, "totalamt": totalPrice };
+                insertCart(temp)
+                break;
+            }
+        }
+
+        if (flg == 0) {
+            alert("Record is not found!!")
+        }
+    }
+}
+
+function insertCart(temp) {
+    let curl = "http://localhost:3000/cart";
+    fetch(curl, {
+        method: "POST",
+        headers: { 'Content-Type': "application/json" },
+        body: JSON.stringify(temp)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            updateCartCount(totalCarts + 1);
+            // fetchdata();
+            alert("Successfully Add To Cart")
+        })
+        .catch(err => console.log(err));
+}
+
+function openPage(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+
+function logout()
+{
+    window.sessionStorage.removeItem("uid");
+    window.sessionStorage.clear();
+    window.location.href="index.html"
+}

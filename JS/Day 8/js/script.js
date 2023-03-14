@@ -46,6 +46,10 @@ function checkCredential(data) {
         let datas = data[i];
         if (datas.userEmail == useremail && datas.userPassword == userpassword) {
             console.log("login done!!!");
+            sessionStorage.setItem("uid",datas.id);
+            sessionStorage.setItem("name",datas.userName);
+            sessionStorage.setItem("email",useremail);
+            sessionStorage.setItem("password",userpassword);
             flag = true;
             window.location.href = "home.html"
             break;
@@ -73,7 +77,7 @@ function register() {
 
         let temp = {
             'id': totalusers + 1, 'userId': userid, 'userName': username, 'userMobile': usermobile
-            , 'userCity': usercity, 'userEmail': useremail, 'userPass': userpassword
+            , 'userCity': usercity, 'userEmail': useremail, 'userPassword': userpassword
         }
 
         fetch(url, {
