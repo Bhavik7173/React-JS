@@ -1,5 +1,6 @@
 let counturl = "http://localhost:3000/count";
 let url = "http://localhost:3000/products";
+let uurl = "http://localhost:3000/users"
 
 let product = []
 let totalusers = 0;
@@ -12,7 +13,6 @@ fetch(url)
         product = data;
         myload();
         uid = window.sessionStorage.getItem("uid");
-        alert(uname);
     })
     .catch(err => console.log(err))
 
@@ -43,7 +43,7 @@ function updateCartCount(cnt) {
 function myload() {
     let msg = "<table border=2 cellpadding=5>";
     for (let i = 0; i < product.length; i++) {
-        console.log("From load", product);
+        // console.log("From load", product);
         let row = product[i];
         msg += "<tr>";
 
@@ -146,14 +146,76 @@ function openPage(cityName) {
     var i;
     var x = document.getElementsByClassName("city");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
+        x[i].style.display = "none";
     }
-    document.getElementById(cityName).style.display = "block";  
-  }
+    document.getElementById(cityName).style.display = "block";
+}
 
-function logout()
-{
+function logout() {
     window.sessionStorage.removeItem("uid");
     window.sessionStorage.clear();
-    window.location.href="index.html"
+    window.location.href = "index.html"
+}
+
+
+fetch(uurl)
+    .then(res => res.json())
+    .then(data => myaccount(data))
+    .catch(err => console.log(err))
+
+function myaccount(data) {
+    {
+
+        flag = false;
+        for (let i = 0; i < data.length; i++) {
+            let datas = data[i];
+            if (datas.id == uid) {
+                console.log("login done!!!");
+                console.log("Data===>", datas)
+                setData(datas);
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false) {
+            alert("Please Check the Credentials!!");
+        }
+    }
+
+}
+
+function setData(datas)
+{
+
+    document.getElementById("firstName").value = datas.userId
+    document.getElementById("lastName").value = datas.userName
+    document.getElementById("emailAddress").value = datas.userEmail
+    document.getElementById("password").value = datas.userPassword
+    if(datas.userCity!=null)
+    {
+        document.getElementById("city").disabled = false
+        document.getElementById("city_label").value = datas.userCity
+        document.getElementById("city").disabled = true
+    }
+    
+    document.getElementById("femaleGender").value = datas.gender
+    if(datas.gender == "Female")
+    {
+        document.getElementById("femaleGender").checked = datas.gender
+        document.getElementById("maleGender").disabled = true
+        document.getElementById("otherGender").disabled = true
+    }else if(datas.gender == "Male")
+    {
+        document.getElementById("femaleGender").disabled = true
+        document.getElementById("maleGender").checked = datas.gender
+        document.getElementById("otherGender").disabled = true
+    }
+    else if(datas.gender == "Other")
+    {
+        document.getElementById("femaleGender").disabled = true
+        document.getElementById("otherGender").checked = datas.gender
+        document.getElementById("maleGender").disabled = true
+    }
+    
+    document.getElementById("phoneNumber").value = datas.userPhone
 }

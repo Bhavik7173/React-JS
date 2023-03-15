@@ -7,6 +7,7 @@
       "userEmail": "b@gmail.com",
       "userPassword": "Bhavik@123",
       "userCity": "Surat",
+      "gender": "Male",
       "userPhone": 9421653212
     },
     {
@@ -15,7 +16,8 @@
       "userName": "Jash",
       "userEmail": "j@gmail.com",
       "userPassword": "Jash@123",
-      "userCity": "Surat",
+      "userCity": "Vadodara",
+      "gender": "Male",
       "userPhone": 9421653212
     },
     {
@@ -24,6 +26,7 @@
       "userName": "Kush",
       "userEmail": "k@gmail.com",
       "userPassword": "Kush@123",
+      "gender": "Male",
       "userCity": "Surat",
       "userPhone": 9421653212
     },
@@ -33,6 +36,7 @@
       "userName": "Gunjan",
       "userMobile": "9099781499",
       "userCity": "Surat",
+      "gender": "Male",
       "userEmail": "g@gmail.com",
       "userPassword": "Gunjan@123"
     },
@@ -41,6 +45,7 @@
       "userId": "105",
       "userName": "Aryan",
       "userMobile": "7845129630",
+      "gender": "Male",
       "userCity": "Valsad",
       "userEmail": "a@gmail.com",
       "userPassword": "Aryan@123"
@@ -51,6 +56,7 @@
       "userName": "Rahi ",
       "userMobile": "9562341870",
       "userCity": "Valsad",
+      "gender": "Female",
       "userEmail": "r@gmail.com",
       "userPassword": "Rahi@123"
     },
@@ -60,6 +66,7 @@
       "userName": "Hir",
       "userMobile": "8798653214",
       "userCity": "Mahesana",
+      "gender": "Female",
       "userEmail": "h@gmail.com",
       "userPassword": "Hir@123"
     }
