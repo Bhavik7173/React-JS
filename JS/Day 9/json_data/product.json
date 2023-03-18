@@ -119,7 +119,7 @@
     },
     {
       "id": 6,
-      "productId": "p06",
+      "": "p06",
       "productName": "Laptop",
       "quantity": 60,
       "company": "ACER",
@@ -180,32 +180,28 @@
     {
       "id": 2,
       "totalProducts": 11
-    },
-    {
-      "id": 3,
-      "totalCarts": 3
     }
   ],
   "cart": [
     {
-      "uid": "3",
-      "PID": 5,
-      "quantity": "15",
-      "totalamt": 153000,
+      "uemail": "b@gmail.com",
+      "pid": 1,
+      "quantity": 5,
+      "totalamt": 15000,
       "id": 1
     },
     {
-      "uid": "1",
-      "PID": 5,
-      "quantity": "15",
-      "totalamt": 153000,
+      "uemail": "b@gmail.com",
+      "pid": 8,
+      "quantity": 5,
+      "totalamt": 120000,
       "id": 2
     },
     {
-      "uid": "3",
-      "PID": 2,
-      "quantity": "15",
-      "totalamt": 42750,
+      "uemail": "b@gmail.com",
+      "pid": 4,
+      "quantity": 5,
+      "totalamt": 60000,
       "id": 3
     }
   ]
