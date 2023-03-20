@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userId": 101,
+      "userName": "savan",
+      "userPass": "savan123",
+      "city": "surat",
+      "mobile": 101,
+      "userEmail": "savan@gmail.com"
+    },
+    {
+      "id": 2,
+      "userId": 102,
+      "userName": "aaaa",
+      "userPass": "aaaa123",
+      "city": "surat",
+      "mobile": 102,
+      "userEmail": "aaa@gmail.com"
+    },
+    {
+      "id": 3,
+      "userId": "103",
+      "userName": "bbb",
+      "userPass": "bbb123",
+      "userCity": "surat",
+      "userMobile": "103",
+      "userEmail": "bbb@gmail.com"
+    },
+    {
+      "id": 4,
+      "userId": "104",
+      "userName": "ccc",
+      "userPass": "ccc123",
+      "userCity": "surat",
+      "userMobile": "104",
+      "userEmail": "ccc@gmail.com"
+    },
+    {
+      "id": 5,
+      "userId": "104",
+      "userName": "ddd",
+      "userPass": "ddd123",
+      "userCity": "surat",
+      "userMobile": "105",
+      "userEmail": "ddd@gmail.com"
+    },
+    {
+      "id": 6,
+      "userId": "106",
+      "userName": "b",
+      "userPass": "b123",
+      "userCity": "surat",
+      "userMobile": "123",
+      "userEmail": "b"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productId": "p01",
+      "productName": "Mouse",
+      "quantity": 20,
+      "company": "dell",
+      "price": 300,
+      "offer": 0
+    },
+    {
+      "id": 2,
+      "productId": "p02",
+      "productName": "Keyboard",
+      "quantity": 10,
+      "company": "dell",
+      "price": 600,
+      "offer": 0
+    }
+  ],
+  "count": [
+    {
+      "id": 1,
+      "totalUsers": 6
+    },
+    {
+      "id": 2,
+      "totalProducts": 2
+    }
+  ],
+  "cart": [
+    {
+      "uId": "6",
+      "pId": 1,
+      "productId": "p01",
+      "productName": "Mouse",
+      "quanity": 5,
+      "totalAmount": 1500,
+      "id": 1
+    },
+    {
+      "uId": "6",
+      "pId": 2,
+      "productId": "p02",
+      "productName": "Keyboard",
+      "quanity": 5,
+      "totalAmount": 3000,
+      "id": 2
+    }
+  ]
+}

@@ -183,7 +183,7 @@
     },
     {
       "id": 3,
-      "totalCarts": 3
+      "totalCarts": 4
     }
   ],
   "cart": [
@@ -207,6 +207,13 @@
       "quantity": "15",
       "totalamt": 42750,
       "id": 3
+    },
+    {
+      "uid": "3",
+      "PID": 7,
+      "quantity": "3",
+      "totalamt": 40500,
+      "id": 4
     }
   ]
 }

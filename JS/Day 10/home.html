@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/home.js'></script>
+</head>
+<body>
+    <div>Home Page </div>
+      
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button type="submit" onclick="showCart()">show cart details</button>
+            <a href='cart.html'><img src='shopping-cart.png' height='20px' weight='20px'></a>
+          </form>
+       
+    
+
+    <div id="home"></div></br></br>
+    <div id="cart">
+      <table class="table table-success table-striped" onload="myCart()">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product ID</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Billed Amount</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="cart_display">
+  
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
