@@ -1,0 +1,86 @@
+Setting Color Property
+The color property defines the text color (foreground color in general) of an element.
+
+For instance, the color property specified in the body selector defines the default text color for the whole page. Let's try out the following example to see how it works:
+
+	body {
+		color: #ff5722;
+	}
+
+Note: The color property normally inherits the color value from their parent element, except the case of anchor elements. For example, if you specify color for the body element it will automatically be passed down to the headings, paragraphs, etc.
+------------------------------------------------------------------------------
+Defining Color Values
+Colors in CSS most often specified in the following formats:
+
+a color keyword - like "red", "green", "blue", "transparent", etc.
+a HEX value - like "#ff0000", "#00ff00", etc.
+an RGB value - like "rgb(255, 0, 0)"
+
+CSS3 has introduced several other color formats such as HSL, HSLA and RGBA that also support alpha transparency. 
+
+------------------------------------------------------------------------------
+Color Keywords
+
+CSS defines the few color keywords which lets you specify color values in an easy way.
+
+These basic color keywords are: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow. The color names are case-insensitive.
+
+Example
+h1 {
+    color: red;
+}
+p {
+    color: purple;
+}
+Modern web browsers however practically support many more color names than what are defined in the CSS standard, but to be on the safer side you should use hex color values instead.
+
+------------------------------------------------------------------------------
+HEX Color Values
+Hex (short for Hexadecimal) is by far the most commonly used method of defining color on the web.
+
+Hex represent colors using a six-digit code, preceded by a hash character, like #rrggbb, in which rr, gg, and bb represents the red, green and blue component of the color respectively.
+
+The value of each component can vary from 00 (no color) and FF (full color) in hexadecimal notation, or 0 and 255 in decimal equivalent notation. Thus #ffffff represents white color and #000000 represents black color. Let's take a look the following example:
+
+Example
+h1 {
+    color: #ffa500;
+}
+p {
+    color: #00ff00;
+}
+
+Note: Hexadecimal or Hex refers to a numbering scheme that uses 16 characters as its base. It uses the numbers 0 through 9 and the letters A, B, C, D, E and F which corresponds to the decimal numbers 10, 11, 12, 13, 14 and 15 respectively.
+
+Tip: If hexadecimal code of a color has value pairs, it can also be written in shorthand notation to avoid extra typing, for example, the hex color value #ffffff can be also be written as #fff, #000000 as #000, #00ff00 as #0f0, #ffcc00 as #fc0, and so on.
+------------------------------------------------------------------------------
+RGB Color Values
+Colors can be defined in the RGB model (Red, Green, and Blue) using the rgb() functional notation.
+
+The rgb() function accepts three comma-separated values, which specify the amount of red, green, and blue component of the color. These values are commonly specified as integers between 0 to 255, where 0 represent no color and 255 represent full or maximum color.
+
+The following example specifies the same color as in the previous example but in RGB notation.
+
+Example
+h1 {
+    color: rgb(255, 165, 0);
+}
+p {
+    color: rgb(0, 255, 0);
+}
+Note: You can also specify RGB values inside the rgb() function in percentage, where 100% represents full color, and 0% (not simply 0) represents no color. For example, you can specify the red color either as rgb(255, 0, 0) or rgb(100%, 0%, 0%).
+
+Tip: If R, G, and B are all set to 255, i.e. rgb(255, 255, 255), the color would be white. Likewise, if all channels are set to 0, i.e. rgb(0, 0, 0), the color would be black. Play with the RGB values in the following demonstration to understand how it actually works.
+------------------------------------------------------------------------------
+Affect of Color Property on Borders and Outlines
+The color property is not just for text content, but for anything in the foreground that takes a color value. For instance, if border-color or outline-color value hasn't been defined explicitly for the element, the color value will be used instead. Let's check out an example:
+
+Example
+p.one {
+    color: #0000ff;
+    border: 2px solid;
+}
+p.two {
+    color: #00ff00;
+    outline: 2px solid;
+}

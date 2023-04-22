@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    border: 2px solid black;
+    margin: 20px;
+    background-color: aquamarine;
+}
+table tr th{
+    border: 2px solid black;
+} 
+table tr td{
+    border: 2px solid black;
+    text-align: center;
+
+ss{
+    padding: 20px;
+}

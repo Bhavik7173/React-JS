@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main1{
+    border: 2px solid black;
+    text-align: center;
+    /* background-color: aqua; */
+    padding: 20px;
+}
+.inner1{
+    padding: 20px;
+}
+table tr td .inner{
+    border: 2px solid black;
+}

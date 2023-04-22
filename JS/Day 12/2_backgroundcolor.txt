@@ -1,0 +1,127 @@
+CSS BACKGROUND
+Setting Background Properties
+Background plays an important role in the visual presentation of a web page.
+
+CSS provide several properties for styling the background of an element, including coloring the background, placing images in the background and managing their positioning, etc.
+
+The background properties are 
+	background-color, 
+	background-image, 
+	background-repeat, 
+	background-attachment and 
+	background-position.
+------------------------------------------------------------------------------
+Background Color
+The background-color property is used to set the background color of an element.
+Example
+	body {
+		background-color: #f0e68c;
+	}
+Color values in CSS are most often specified in the following formats:
+
+	a color name - like "red"
+	a HEX value - like "#ff0000"
+	an RGB value - like "rgb(255, 0, 0)"
+
+------------------------------------------------------------------------------
+Background Image
+The background-image property set an image as a background of an HTML element.
+Example	
+	body {
+		background-image: url("images/tile.png");
+	}
+Note: When applying the background image to an element, make sure that the image you choose does not affect the readability of the element's text content.
+
+Tip: By default browser repeats or tiles the background image both horizontally and vertically to fill the entire area of an element. You can control this with background-repeat property.
+------------------------------------------------------------------------------
+Background Repeat
+The background-repeat property allows you to control how a background image is repeated or tiled in the background of an element. You can set a background image to repeat vertically (y-axis), horizontally (x-axis), in both directions, or in neither direction.
+
+Let's try out the following example which demonstrates how to set the gradient background for a web page by repeating the sliced image horizontally along the x-axis.
+
+	body {
+		background-image: url("images/gradient.png");
+		background-repeat: repeat-x;
+	}
+
+Similarly, you can use the value repeat-y to repeat the background image vertically along the y-axis, or the value no-repeat to prevent the repetition altogether.
+
+Example
+	body {
+		background-image: url("images/texture.png");
+		background-repeat: no-repeat;
+	}
+------------------------------------------------------------------------------
+Background Position
+The background-position property is used to control the position of the background image.
+
+If no background position has been specified, the background image is placed at the default top-left position of the element i.e. at (0,0), let's try out the following example:
+
+Example
+body {
+    background-image: url("images/robot.png");
+    background-repeat: no-repeat;
+}
+
+In the following example, the background image is positioned at top-right corner.
+
+Example
+body {
+    background-image: url("images/robot.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+Note: If two values are specified for the background-position property, the first value represents the horizontal position, and the second represents the vertical position. If only one value is specified, the second value is assumed to be center.
+
+Besides keywords, you can also use percentage or length values, such as px or em for this property.
+More values	
+	background-position : 0 0; 			background-position : left top;
+	background-position : 50% 0; 			background-position : top;
+	background-position : 100% 0; 			background-position : right top;
+	
+	background-position : 0 50%; 			background-position : left ;
+	background-position : 50% 50%; 			background-position : center;
+	background-position : 100% 50%; 			background-position : right ;
+	
+	background-position : 0 100%; 			background-position : left bottom;
+	background-position : 50% 100%; 			background-position : bottom;
+	background-position : 100% 100%; 			background-position : right bottom;
+	
+------------------------------------------------------------------------------
+Background Attachment
+The background-attachment property determines whether the background image is fixed with regard to the viewport or scrolls along with the containing block.
+
+Example
+	body {
+    background-image: url("images/bell.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+------------------------------------------------------------------------------
+The Background Shorthand Property
+in the examples above, there are many properties to consider when dealing with the backgrounds. However, it is also possible to specify all these properties in one single property to shorten the code or avoid extra typing. This is called a shorthand property.
+
+The background property is a shorthand property for setting all the individual background properties, i.e., background-color, background-image, background-repeat, background-attachment and the background-position property at once. Let's see how this works:
+
+Example
+body {
+    background-color: #f0e68c;
+    background-image: url("images/smiley.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 250px 25px;
+}
+Using the shorthand notation the above example can be written as:
+
+Example
+body {
+    background: #f0e68c url("images/smiley.png") no-repeat fixed 250px 25px;
+}
+When using the background shorthand property the order of the property values should be.
+
+	background: color image repeat attachment position;
+	
+If the value for an individual background property is missing or not specified while using the shorthand notation, the default value for that property will be used instead, if any.
+
+Note: The background properties do not inherit like the color property, but the parent element's background will be visible through by default, because of the initial or default transparent value of the background-color CSS property.
