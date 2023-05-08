@@ -2,143 +2,205 @@
   "users": [
     {
       "id": 1,
-      "userId": 101,
-      "userName": "savan",
-      "userPass": "savan123",
-      "city": "surat",
-      "mobile": 101,
+      "userName": "Savan Patel",
+      "userPass": "savan@123",
+      "city": "Surat",
+      "mobile": "1234567890",
       "userEmail": "savan@gmail.com"
     },
     {
       "id": 2,
-      "userId": 102,
-      "userName": "aaaa",
-      "userPass": "aaaa123",
-      "city": "surat",
-      "mobile": 102,
-      "userEmail": "aaa@gmail.com"
+      "userName": "Bhavik Patel",
+      "userPass": "Bhavik@3797",
+      "city": "Althan",
+      "mobile": "6353539097",
+      "userEmail": "bhavik@gmail.com"
     },
     {
       "id": 3,
-      "userId": "103",
-      "userName": "bbb",
-      "userPass": "bbb123",
-      "userCity": "surat",
-      "userMobile": "103",
-      "userEmail": "bbb@gmail.com"
+      "userName": "Sumit Davda",
+      "userPass": "sumit@123",
+      "city": "Bharuch",
+      "mobile": "7777956877",
+      "userEmail": "sumit@gmail.com"
     },
     {
       "id": 4,
-      "userId": "104",
-      "userName": "ccc",
-      "userPass": "ccc123",
-      "userCity": "surat",
-      "userMobile": "104",
-      "userEmail": "ccc@gmail.com"
+      "userName": "Roni Patel",
+      "userPass": "roni@123",
+      "city": "Vadodra",
+      "mobile": "9856321470",
+      "userEmail": "roni@gmail.com"
     },
     {
       "id": 5,
-      "userId": "104",
-      "userName": "ddd",
-      "userPass": "ddd123",
-      "userCity": "surat",
-      "userMobile": "105",
-      "userEmail": "ddd@gmail.com"
+      "userName": "Avi Patel",
+      "userPass": "avi@123",
+      "city": "Ahemdabad",
+      "mobile": "8320248006",
+      "userEmail": "avi@gmail.com"
     },
     {
       "id": 6,
-      "userId": "106",
-      "userName": "b",
-      "userPass": "b123",
-      "userCity": "surat",
-      "userMobile": "123",
-      "userEmail": "b"
+      "userName": "Riya Patel",
+      "userPass": "riya@123",
+      "city": "Canada",
+      "mobile": "7878319128",
+      "userEmail": "riya@gmail.com"
+    },
+    {
+      "id": 7,
+      "userName": "Riya Patel",
+      "userPass": "riya@123",
+      "city": "Canada",
+      "mobile": "7878319128",
+      "userEmail": "riya@gmail.com"
+    },
+    {
+      "id": 8,
+      "userName": "Neha Patel",
+      "userPass": "neha@123",
+      "city": "Navsari",
+      "mobile": "7878319128",
+      "userEmail": "neha@gmail.com"
+    },
+    {
+      "id": 9,
+      "userName": "Aryan Patel",
+      "userPass": "aryan@123",
+      "city": "USA",
+      "mobile": "7878319128",
+      "userEmail": "aryan@gmail.com"
     }
   ],
   "products": [
     {
       "id": 1,
       "productName": "Mouse",
-      "price": "$1200",
+      "price": "1200",
       "payment": "Paid",
       "status": "Delivered"
     },
     {
       "id": 2,
       "productName": "Speakers",
-      "price": "$620",
+      "price": "620",
       "payment": "Paid",
       "status": "Return"
-    },{
+    },
+    {
       "id": 3,
       "productName": "HP Laptop",
-      "price": "$110",
+      "price": "110",
       "payment": "Due",
       "status": "In Progress"
-    },{
+    },
+    {
       "id": 4,
       "productName": "Wall Fan",
-      "price": "$110",
+      "price": "110",
       "payment": "Paid",
       "status": "Pending"
-    },{
+    },
+    {
       "id": 5,
       "productName": "Star Refrigerator",
-      "price": "$1200",
+      "price": "1200",
       "payment": "Paid",
       "status": "Delivered"
-    },{
+    },
+    {
       "id": 6,
       "productName": "Window Coolers",
-      "price": "$110",
+      "price": "110",
       "payment": "Due",
       "status": "Pending"
-    },{
+    },
+    {
       "id": 7,
       "productName": "Apple Watch",
-      "price": "$1200",
+      "price": "1200",
       "payment": "Paid",
       "status": "Delivered"
-    },{
+    },
+    {
       "id": 8,
       "productName": "Adidas Shoes",
-      "price": "$620",
+      "price": "620",
       "payment": "Paid",
       "status": "Return"
-    },{
+    },
+    {
       "id": 9,
       "productName": "Denim Shirts",
-      "price": "$110",
+      "price": "110",
       "payment": "Due",
       "status": "In Progress"
-    },{
+    },
+    {
       "id": 10,
       "productName": "Casual Shoes",
-      "price": "$575",
+      "price": "575",
       "payment": "Paid",
       "status": "Pending"
-    },{
+    },
+    {
       "id": 11,
       "productName": "Wall Fan",
-      "price": "$110",
+      "price": "110",
       "payment": "Paid",
       "status": "Pending"
-    },{
+    },
+    {
       "id": 12,
       "productName": "Denim Shirts",
-      "price": "$110",
+      "price": "110",
       "payment": "Due",
       "status": "In Progress"
+    }
+  ],
+  "cart": [
+    {
+      "uID": "1",
+      "productName": "HP Laptop",
+      "quanity": 5,
+      "totalAmount": 550,
+      "id": 1
+    },
+    {
+      "uID": "1",
+      "productName": "Star Refrigerator",
+      "quanity": 5,
+      "totalAmount": 6000,
+      "id": 2
+    },
+    {
+      "uID": "1",
+      "productName": "Apple Watch",
+      "quanity": 5,
+      "totalAmount": 6000,
+      "id": 3
+    },
+    {
+      "uID": "1",
+      "productName": "Wall Fan",
+      "quanity": 5,
+      "totalAmount": 550,
+      "id": 4
     }
   ],
   "count": [
     {
       "id": 1,
-      "totalUsers": 6
+      "totalUsers": 9
     },
-     {
+    {
       "id": 2,
       "totalProducts": 12
+    },
+    {
+      "id": 3,
+      "totalCarts": 2
     }
   ]
 }
