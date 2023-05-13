@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.fcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.fitem{
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul li{
+    list-style-type: none;
+}
